@@ -1,0 +1,6 @@
+# fetch_commons.py（在 vintage-archive/scripts）的参数：名字|维基文件标题
+mona|File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg
+ermine|File:Lady with an Ermine - Leonardo da Vinci - Google Art Project.jpg
+ginevra|File:Leonardo da Vinci - Ginevra de' Benci - Google Art Project.jpg
+john|File:Leonardo da Vinci - Saint John the Baptist C2RMF retouched.jpg
+self|File:Leonardo self.jpg

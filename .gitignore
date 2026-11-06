@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+.remotion/
+out/
+build/
+dist/
+
+# 渲染产物与素材（体积大，不入库）
+*.mp4
+*.mp3
+*.wav
+vo/
+public/raw/
+public/*_aged.jpg
+
+# 编辑器
+.DS_Store
+.idea/
+.vscode/

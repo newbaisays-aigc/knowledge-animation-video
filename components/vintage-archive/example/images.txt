@@ -1,0 +1,8 @@
+# fetch_commons.py 的参数（名字|维基文件标题）
+study|File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg
+alps|File:Jacques Louis David - Bonaparte franchissant le Grand Saint-Bernard, 20 mai 1800 - Google Art Project.jpg
+coron|File:Jacques-Louis David, The Coronation of Napoleon edit.jpg
+austerlitz|File:La bataille d'Austerlitz. 2 decembre 1805 (François Gérard).jpg
+code|File:Code civil des Français (1804).jpg
+waterloo|File:The Battle of Waterloo (by William Sadler II).jpg
+longwood|File:Attributed to Louis-Joseph-Narcisse Marchand, View of Longwood House 02.jpg
