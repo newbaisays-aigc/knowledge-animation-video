@@ -6,7 +6,7 @@ compatibility: 需要 Node.js 18+、Remotion 4.x（所有 @remotion/* 须同版�
 metadata:
   author: 小白姐姐
   author-github: newbaisays-aigc
-  version: "1.1.0"
+  version: "1.2.0"
   license: MIT
   homepage: https://github.com/newbaisays-aigc/knowledge-animation-video
 ---
@@ -235,6 +235,21 @@ metadata:
 1. 先确认是第几个镜头（不确定就根据描述的内容反查分镜表）。
 2. 只修改该镜头的组件文件，其他镜头一律不动。
 3. 改完先截图给用户看，确认后再重新渲染完整视频。
+
+### 更新这个 Skill 本身时
+
+如果用户要求修改 Skill 的内容（加模板、加组件、改文档）并推送到 GitHub：
+
+- **每次推送都必须打一个新 tag**，版本号格式 `vMAJOR.MINOR.PATCH`，与 frontmatter 的 `metadata.version` 一致。
+- 不要手写 `git tag` / `git push` / `gh release`，统一用 `tools/release.py`：
+
+```bash
+python tools/release.py --bump minor --note "本次更新说明"
+```
+
+它会依次完成：改版本号 → 更新 `CHANGELOG.md` → 重新打包 `.skill` → 提交 → 打 tag → 推送 → 创建 GitHub Release（附分发包）。
+
+改完之后不需要问用户"要不要发布"，直接按上面的命令执行即可。
 
 ---
 

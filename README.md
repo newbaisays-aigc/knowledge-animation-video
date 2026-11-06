@@ -97,8 +97,40 @@
 | `components/common/scripts/mix_audio.py` | 配音 + BGM + 音效混音，一次输出三条音轨 |
 | `components/common/scripts/uv_grid.py` | 给图片叠 0..1 坐标网格，读出精确 uv 坐标 |
 | `components/common/scripts/export_versions.sh` | 画面只渲染一次，合成多个声音版本 |
+| `tools/pack_skill.py` | 把 skill 目录打成 `.skill` 分发包 |
+| `tools/release.py` | 一键发布：版本号 → 打包 → 提交 → 打 tag → 推送 → 发 Release |
 
 **注意**：`export_versions.sh` 的入口参数必须是含 `registerRoot()` 的文件（通常是 `src/index.ts`），传 `Root.tsx` 会报 `does not contain registerRoot`。
+
+## 版本与发布
+
+**约定：每次向 GitHub 推送更新，都必须打一个新 tag。**
+
+tag 格式为 `vMAJOR.MINOR.PATCH`，与 `SKILL.md` frontmatter 里的 `metadata.version` 始终保持一致，由 `tools/release.py` 统一维护。
+
+```bash
+# 递增版本并完成整套发布（打包 → 提交 → 打 tag → 推送 → 建 Release）
+python tools/release.py --bump minor --note "本次更新说明"
+
+# 只做本地提交与打 tag，不推送
+python tools/release.py --bump patch --no-push
+
+# 演练，看清楚会改什么再执行
+python tools/release.py --bump patch --dry-run
+```
+
+脚本会依次完成：
+
+1. 把新版本号写回 `SKILL.md` 的 `metadata.version`
+2. 在 `CHANGELOG.md` 顶部插入本次条目
+3. 重新打包 `.skill` 分发包
+4. 提交（提交信息自动带 `release: vX.Y.Z`）
+5. 打带注释的 tag
+6. 推送提交与 tag，并创建 / 更新对应的 GitHub Release（附上分发包）
+
+若远端有人在 GitHub 网页上直接改了文件（比如编辑 README），脚本会先 `fetch` + `rebase` 再推，不会直接失败；rebase 改写 hash 后 tag 会自动重新指向。
+
+版本号已存在时会拒绝执行，需要换更大的版本号（用 `--set 1.2.3`）。
 
 ## 素材来源与授权
 
