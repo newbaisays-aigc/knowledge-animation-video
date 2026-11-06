@@ -2,7 +2,7 @@
 
 把一段口播稿（或录好的口播音频）加一张风格参考图，做成带背景音乐和音效的知识动画视频。
 
-这是一个**工具无关的 Agent Skill**：核心是 `SKILL.md` 里的流程规范 + `templates/` 里的 6 套视觉模板 + `components/` 里的 Remotion 组件库。只要你的 AI 助手能读 Markdown、跑 shell、写文件，就能用它出片。
+这是一个**工具无关的 Agent Skill**，支持在任何agent里使用：核心是 `SKILL.md` 里的流程规范 + `templates/` 里的 6 套视觉模板 + `components/` 里的 Remotion 组件库。只要你的 AI 助手能读 Markdown、跑 shell、写文件，就能用它出片。
 
 **技术栈**：Remotion（React 写视频）+ Python 脚本（配音/对齐/混音）+ ffmpeg。
 
