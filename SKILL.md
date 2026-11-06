@@ -6,7 +6,7 @@ compatibility: 需要 Node.js 18+、Remotion 4.x（所有 @remotion/* 须同版�
 metadata:
   author: 小白姐姐
   author-github: newbaisays-aigc
-  version: "1.0.0"
+  version: "1.1.0"
   license: MIT
   homepage: https://github.com/newbaisays-aigc/knowledge-animation-video
 ---
