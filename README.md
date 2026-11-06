@@ -2,7 +2,9 @@
 
 把一段口播稿（或录好的口播音频）加一张风格参考图，做成带背景音乐和音效的知识动画视频。
 
-这是一个 [WorkBuddy](https://www.workbuddy.cn) Skill：Agent 读取 `SKILL.md` 里的流程规范后，负责选模板、设计分镜、写 Remotion 代码、渲染出片。
+这是一个**工具无关的 Agent Skill**：核心是 `SKILL.md` 里的流程规范 + `templates/` 里的 6 套视觉模板 + `components/` 里的 Remotion 组件库。只要你的 AI 助手能读 Markdown、跑 shell、写文件，就能用它出片。
+
+**技术栈**：Remotion（React 写视频）+ Python 脚本（配音/对齐/混音）+ ffmpeg。
 
 ---
 
@@ -23,6 +25,7 @@
 
 ```
 ├── SKILL.md                 # Agent 主流程说明（本仓库的核心）
+├── LICENSE                  # MIT + 第三方素材授权说明
 ├── templates/               # 6 套模板，每套一个 Markdown
 │   ├── 3d-data.md           # A
 │   ├── hand-drawn.md        # B
@@ -32,7 +35,7 @@
 │   └── gallery.md           # F
 └── components/              # 已调好的可复用组件库
     ├── common/scripts/      # 全模板共用脚本（TTS / 对齐 / 混音 / 导出）
-    ├── 3d-data/reference/   # 3D 数据参考实现（SpaceX 财报快讯源码）
+    ├── 3d-data/reference/   # 3D 数据参考实现（SpaceX 财报快讯）
     ├── gallery/             # 美术馆组件 + 蒙娜丽莎完整示例
     └── vintage-archive/     # 复古档案组件 + 拿破仑完整示例
 ```
@@ -49,12 +52,44 @@
 6. **生成视频** —— 每镜头独立组件（Scene01、Scene02……），便于单点返修
 7. **交付与修改** —— 导出多个声音版本，指定镜头单独改
 
+## 安装
+
+把整个 `knowledge-animation-video/` 目录放到你的 agent 能读到的 skill 位置即可。常见约定：
+
+| Agent / 工具 | 路径 |
+|---|---|
+| Claude Code | `~/.claude/skills/knowledge-animation-video/` |
+| Cursor | `~/.cursor/rules/` 或项目内 `.cursor/rules/` |
+| Windsurf | `~/.codeium/windsurf/rules/` |
+| OpenCode / Cline / Roo 等 | 项目内 `.agent/skills/` 或自定义 skills 目录 |
+| 通用 Agent Skills 规范 | `~/.agent/skills/knowledge-animation-video/` |
+
+**通用做法**：把目录放到任意位置，然后在你的 agent 配置里把它注册为 skill，或者直接把 `SKILL.md` 的内容作为系统提示 / 首条消息喂给它 —— 只要 agent 能读到 `SKILL.md` 和 `templates/`、`components/` 相对路径下的文件，就能工作。
+
+> 用 symlink 指向统一存放位置最省事：
+> ```bash
+> ln -s /path/to/knowledge-animation-video ~/.claude/skills/knowledge-animation-video
+> ```
+
+## 依赖
+
+| 依赖 | 版本 | 用途 | 缺失时的降级 |
+|---|---|---|---|
+| **Remotion** | 4.x（所有 `@remotion/*` 必须同版本） | 渲染视频 | 必需 |
+| **Node.js** | 18+ | Remotion 运行时 | 必需 |
+| **Python** | 3.10+ | 配音 / 对齐 / 混音脚本 | 改用 agent 自带的 TTS |
+| **ffmpeg** | 6+ | 音视频处理 | 必需 |
+| **edge-tts** | `pip install edge-tts` | 文稿转配音 | 改用 agent 自带的 TTS |
+| **faster-whisper** | `pip install faster-whisper`（首次下载约 500MB 模型） | 自录音频对齐 | 人工标注时间点 |
+
+渲染 WebGL 内容时必须加 `--gl=swangle`（或 `angle`）。
+
 ## 通用脚本
 
 | 脚本 | 用途 |
 |---|---|
-| `components/common/scripts/tts.py` | 文稿 → 配音 + 逐句时间（需 `pip install edge-tts`） |
-| `components/common/scripts/align.py` | 自录音频 + 稿件 → 逐句时间（需 `pip install faster-whisper`） |
+| `components/common/scripts/tts.py` | 文稿 → 配音 + 逐句时间 |
+| `components/common/scripts/align.py` | 自录音频 + 稿件 → 逐句时间 |
 | `components/common/scripts/cues_convert.py` | 把上面脚本的输出转成 `cues.json` |
 | `components/common/scripts/mix_audio.py` | 配音 + BGM + 音效混音，一次输出三条音轨 |
 | `components/common/scripts/uv_grid.py` | 给图片叠 0..1 坐标网格，读出精确 uv 坐标 |
@@ -62,29 +97,20 @@
 
 **注意**：`export_versions.sh` 的入口参数必须是含 `registerRoot()` 的文件（通常是 `src/index.ts`），传 `Root.tsx` 会报 `does not contain registerRoot`。
 
-## 安装
+## 素材来源与授权
 
-把整个 `knowledge-animation-video/` 目录放进 WorkBuddy 的 skills 目录：
+**图片素材**由 `components/vintage-archive/scripts/fetch_commons.py` 从维基共享资源下载。维基共享资源每张图授权独立：
 
-- Windows：`C:\Users\<用户>\.workbuddy\skills\knowledge-animation-video\`
-- macOS / Linux：`~/.workbuddy/skills/knowledge-animation-video/`
+- `Public domain`（公有领域）—— 无需署名
+- `CC BY` / `CC BY-SA` —— **必须署名**；`CC BY-SA` 还要求衍生作品同协议发布
 
-重启 WorkBuddy 后即可被识别。
+脚本会自动生成 `ATTRIBUTION.md`，列出每张素材的作品名、作者、授权协议、来源页面和署名要求。**交付成片前请照它逐条落实署名。**
 
-## 依赖
-
-- **Remotion** 4.x（所有 `@remotion/*` 必须同版本）
-- **Node.js** 18+
-- **Python** 3.10+（配音 / 对齐 / 混音脚本）
-- 渲染 WebGL 内容时必须加 `--gl=swangle`（或 `angle`）
-
-## 素材来源
-
-历史人物、名画、文物等真实图片优先使用维基共享资源等平台的公版图片，交付时需注明来源。
+**字体**由 `components/vintage-archive/scripts/setup_assets.sh` 从 google/fonts 官方仓库下载（Special Elite = Apache 2.0；Old Standard / Playfair Display / Instrument Serif / JetBrains Mono = OFL 1.1），可商用、可嵌入，需随成品保留许可声明。脚本会做 sha256 完整性校验。
 
 ## 实测踩坑清单
 
-第一轮 27 秒复古档案成片跑出来的血泪经验，照做能省很多返工：
+第一轮 27 秒复古档案成片跑出来的经验，照做能省很多返工：
 
 1. **维基共享资源的文件名会骗人。** 标题写着 `Winged Victory of Samothrace`，下下来是墙上那块刻字。取图后必须先看图再写镜头。
 2. **竖构图照片不能塞整屏。** 竖图一律用相片卡（`PhotoCard`），不是满屏铺图。
@@ -94,4 +120,4 @@
 
 ## License
 
-MIT
+代码部分 MIT，见 [LICENSE](LICENSE)。图片与字体等第三方素材各有独立授权，详见上文「素材来源与授权」。

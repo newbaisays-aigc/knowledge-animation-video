@@ -18,4 +18,4 @@
 
 推荐声音：zh-CN-YunjianNeural（男，新闻感）、zh-CN-YunxiNeural（男，年轻）、zh-CN-XiaoxiaoNeural（女）、zh-CN-YunyangNeural（男，播音）
 
-来源：tts.py、align.py 来自 `D:\00claude\skills\parallax-explainer-video\scripts`，已在多个项目里用过。
+来源：tts.py、align.py 已在多个项目里用过，可直接复用。

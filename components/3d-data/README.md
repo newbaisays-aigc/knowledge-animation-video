@@ -1,6 +1,6 @@
 # 3D 数据组件参考（3d-data）
 
-来源：`D:\00claude\SpaceX财报Remotion-源码`（SpaceX Q3 财报 10 秒 3D 数据快讯，已实际渲染出片）。
+来源：SpaceX Q3 财报 10 秒 3D 数据快讯（已实际渲染出片）。
 这里先作为**参考实现**收录，还没有拆成独立组件。做 3D 数据模板时，先读 `reference/scene.js`，直接复用里面的工具函数，不要从零写。
 
 ## reference/scene.js 里可以直接拿来用的部分
