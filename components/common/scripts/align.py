@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 """用户自带配音（mp3/wav/mp4）+ 稿件 → 逐句字幕时间（cues.json）
 
 用法：

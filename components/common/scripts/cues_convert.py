@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 """把 tts.py / align.py 输出的 cues.json（[[开始, 结束, "句子"], ...]）
 转成 Remotion 组件用的格式 {"cues":[{"text","start","end"}], "total": 秒}
 用法：python3 cues_convert.py <tts输出目录> <输出cues.json> [片尾留白秒数=1.0]

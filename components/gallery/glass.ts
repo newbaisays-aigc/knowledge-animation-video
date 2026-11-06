@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 美术馆组件库 · 液态玻璃着色器（WebGL1，兼容 swangle 软件渲染）
  * 一次全屏绘制：背景画作（可模糊/压暗/两张交叉）+ 最多 MAXL 个玻璃镜片

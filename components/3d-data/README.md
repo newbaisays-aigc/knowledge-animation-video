@@ -31,3 +31,7 @@
 - 渲染需要 WebGL：Remotion 的 chromiumOptions 设 `gl: 'swangle'`
 - 3D 场景渲染慢：用 `frameRange` 分段并行渲染，最后再拼接
 - 文字只能显示 `chars.txt` 里有的字，改稿后要重新跑 `mkfont.py`
+
+---
+
+*Copyright (c) 2026 小白姐姐 · MIT License · https://github.com/newbaisays-aigc/knowledge-animation-video*

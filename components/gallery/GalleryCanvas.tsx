@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 美术馆组件库 · WebGL 画布
  * <GalleryCanvas arts={作品数组} state={(f) => FrameState} />

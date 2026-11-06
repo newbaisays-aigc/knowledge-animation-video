@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 # 导出多个声音版本：画面只渲染一次，再分别合成音轨（音效始终保留）
 # 用法：bash export_versions.sh <入口文件> <合成ID> <输出名前缀> [版本...]
 #   版本可选：full（完整版）no_voice（无旁白）no_music（无音乐），不写则三个都导出

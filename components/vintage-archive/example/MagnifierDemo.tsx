@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 import React from 'react';
 import {Composition, registerRoot} from 'remotion';
 // 放大镜示例：在《加冕礼》相片卡上放大拿破仑举起的皇冠。focus 坐标用 common/scripts/uv_grid.py 读出

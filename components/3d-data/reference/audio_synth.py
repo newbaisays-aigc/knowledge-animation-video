@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 # 10 秒科技感 BGM + 音效（纯 numpy 合成），对齐镜头时间轴
 import numpy as np, wave, sys
 SR = 48000; T = 10.0; N = int(SR * T); t = np.arange(N) / SR

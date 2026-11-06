@@ -73,3 +73,7 @@
 | 转折、失败 | 重低音 | -12 |
 | 翻书 | 133-纸张翻页-1（对齐书翻开第 10 帧左右） | -14 |
 | 海、岛、结尾 | 117-海浪声（作 bed） | -22 |
+
+---
+
+*Copyright (c) 2026 小白姐姐 · MIT License · https://github.com/newbaisays-aigc/knowledge-animation-video*

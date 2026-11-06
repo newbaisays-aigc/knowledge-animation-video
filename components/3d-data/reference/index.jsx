@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 import React, { useEffect, useRef, useState } from 'react';
 import { AbsoluteFill, Audio, Composition, continueRender, delayRender, staticFile, useCurrentFrame, useVideoConfig, registerRoot } from 'remotion';
 import { ThreeCanvas } from '@remotion/three';

@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 """把 skill 目录打包成 .skill（zip）分发包。
 用法：python pack_skill.py <skill目录> [输出路径]
 规范（与同目录其他 .skill 包一致）：

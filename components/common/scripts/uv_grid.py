@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 """给图片叠一层 0..1 坐标网格，方便确定放大镜 focus / 视图 uv 坐标
 用法：python3 uv_grid.py 图片.jpg 输出.jpg
 看图读出目标（嘴角、皇冠、签名）的 (u, v)，填进 Magnifier 的 focus 或 view 的 uv。不要凭感觉估坐标。"""

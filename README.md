@@ -6,6 +6,9 @@
 
 **技术栈**：Remotion（React 写视频）+ Python 脚本（配音/对齐/混音）+ ffmpeg。
 
+**作者**：小白姐姐（Xiao Bai）· [@newbaisays-aigc](https://github.com/newbaisays-aigc) · MIT 协议
+**项目地址**：https://github.com/newbaisays-aigc/knowledge-animation-video
+
 ---
 
 ## 核心原则：风格决定工具
@@ -118,6 +121,23 @@
 4. **元素入场要留够稳定时间。** 本幕不足 60 帧时，弹簧入场的东西会没落定就被切场。
 5. **渲染前先抽 3～5 张关键帧自查**，不要一次渲染到黑。自查方法是裁切放大局部看文字是否溢出，而不是只看整帧缩略图。
 
+## 作者与致谢
+
+**作者**：小白姐姐（Xiao Bai）—— 产品设计师 / 科技博主
+
+- GitHub：[@newbaisays-aigc](https://github.com/newbaisays-aigc)
+- 项目主页：https://github.com/newbaisays-aigc/knowledge-animation-video
+- 协议：MIT
+
+所有源文件均带有 `Copyright (c) 2026 小白姐姐. MIT License.` 版权头。
+
+**贡献**：欢迎提 issue 和 PR。改模板、加视觉类型、补组件都可以，提交前请确认：
+
+- 跑一遍 `python -m py_compile` 和 `bash -n` 确认没语法错误
+- 新增的图片素材按上文「素材来源与授权」处理，能自动生成 `ATTRIBUTION.md`
+- 别把本地绝对路径写进代码或文档
+
 ## License
 
 代码部分 MIT，见 [LICENSE](LICENSE)。图片与字体等第三方素材各有独立授权，详见上文「素材来源与授权」。
+

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 // =============================================================
 // 时间线（单一真源）：画面、文字、音频事件都从这里读取
 // 30fps · 960 帧 · 120 BPM（1 拍 = 15 帧）

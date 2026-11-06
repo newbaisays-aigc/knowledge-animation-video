@@ -1,6 +1,14 @@
 ---
 name: knowledge-animation-video
 description: 把一段口播稿（或录好的口播音频）加一张风格参考图，做成带背景音乐和音效（字幕可选）的知识动画视频。开场让用户选视频类型（3D 数据 / 手绘涂鸦 / 数学公式 / 信息图 / 复古档案 / 美术馆）和比例（16:9 / 9:16 / 1:1），用 Remotion 等代码工具生成，支持逐镜头修改。用户说"做知识动画""把文稿做成动画视频""用参考图做动画""数据可视化视频""手绘动画讲概念""公式动画""信息图视频""历史人物视频""复古纪录片风""名画赏析""艺术品讲解"时使用。
+license: MIT
+compatibility: 需要 Node.js 18+、Remotion 4.x（所有 @remotion/* 须同版本）、ffmpeg 6+、Python 3.10+；Python 依赖缺失时可降级使用宿主自带 TTS
+metadata:
+  author: 小白姐姐
+  author-github: newbaisays-aigc
+  version: "1.0.0"
+  license: MIT
+  homepage: https://github.com/newbaisays-aigc/knowledge-animation-video
 ---
 
 # 知识动画视频生成
@@ -10,6 +18,9 @@ description: 把一段口播稿（或录好的口播音频）加一张风格参�
 **技术栈**：Remotion（React 写视频）+ Python 脚本（配音/对齐/混音）+ ffmpeg。
 
 **核心原则：风格决定工具。** 先定类型，再按该类型的模板选工具和写画面。
+
+**作者**：小白姐姐（Xiao Bai）· [GitHub @newbaisays-aigc](https://github.com/newbaisays-aigc) · MIT 协议
+**项目地址**：https://github.com/newbaisays-aigc/knowledge-animation-video
 
 > **本 Skill 与具体 AI 工具无关。** 只要你的宿主环境能读 `SKILL.md`、能跑 shell 命令、能写文件，就能使用它。
 > TTS 优先用 `components/common/scripts/tts.py`（Edge TTS，需联网）；

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 import React from 'react';
 import {Composition, registerRoot} from 'remotion';
 import {Napoleon} from './Napoleon';

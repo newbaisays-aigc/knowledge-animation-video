@@ -63,3 +63,7 @@
 - 所有动画都是帧号的纯函数，可以分段并行渲染：`--frames=0-179` 这类写法
 - **文件名不要用 `MSI` 这类和系统用户名相同的词**：某些沙盒环境会把它当个人文件清掉。示例里的《施洗者圣约翰》已改名为 `baptist.jpg`
 - `example/original/` 是原始一体化源码，`example/MonaLisa.tsx` 是用组件库重写的版本，两者效果一致
+
+---
+
+*Copyright (c) 2026 小白姐姐 · MIT License · https://github.com/newbaisays-aigc/knowledge-animation-video*

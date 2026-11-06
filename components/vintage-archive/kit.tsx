@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 复古档案组件库 · 基础元件（kit）
  * 依赖：remotion。需要 public/ 下有：paper.jpg wood.jpg grain.png 以及字体文件（见 README）。

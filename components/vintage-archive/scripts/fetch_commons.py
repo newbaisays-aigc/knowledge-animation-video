@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 """从维基共享资源下载公版图片（带限速和重试，避免被限流）
 用法：python3 fetch_commons.py <输出目录> "名字|File:标题" "名字|File:标题" ...
       python3 fetch_commons.py --search "关键词"     列出候选文件名和原图宽度

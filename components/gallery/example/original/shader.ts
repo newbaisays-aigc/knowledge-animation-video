@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 // 液态玻璃着色器（WebGL1，兼容 swangle 软件渲染）
 export const MAXL = 8;
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 示例：《拿破仑》20 秒复古档案风知识动画（16:9）
  * 演示组件库的全部元件。新项目照这个结构写：每幕一个组件 + ArchiveFrame 串起来。

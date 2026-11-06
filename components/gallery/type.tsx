@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 美术馆组件库 · 文字排版
  * 风格：中文宋体 + 意大利斜体外文 + 等宽小字；铜色强调；入场 = 上浮 + 去模糊 + 弹簧

@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 # 把 Noto Sans CJK SC Bold 中用到的字形导出成 three.js typeface JSON
 import json, sys
 from fontTools.ttLib import TTCollection

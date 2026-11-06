@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 // SpaceX Q3 财报 · 10 秒 3D 数据快讯
 // 每个镜头是独立 Scene + Camera，转场时分别渲染到两张 RT，再用遮罩 shader 合成（圆形扩散 / 斜向光刃）。
 // 所有动画都是时间 T 的纯函数，可任意分段渲染。

@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 """生成复古档案风格贴图：wood.jpg（旧木桌）paper.jpg（做旧纸）grain.png（胶片颗粒）
 用法：python3 gen_textures.py <输出目录>
 另：python3 gen_textures.py <输出目录> --age a.jpg b.jpg ...   把图片做旧，输出 a_aged.jpg"""

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 复古档案组件库 · 动效与复合组件（motion）
  * Scene        每幕的镜头运动：从桌面一侧平移进入、缓慢推近、从另一侧离开

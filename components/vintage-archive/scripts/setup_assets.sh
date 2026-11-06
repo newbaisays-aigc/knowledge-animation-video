@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 # 用法：bash setup_assets.sh <remotion项目的public目录>
 # 下载字体 + 生成木桌/纸张/颗粒贴图
 #

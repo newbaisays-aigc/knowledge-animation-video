@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 示例：《蒙娜丽莎》32 秒美术馆风知识动画（16:9，960 帧）
  * 用组件库重写的版本；原始一体化源码在 original/ 里，效果一致。

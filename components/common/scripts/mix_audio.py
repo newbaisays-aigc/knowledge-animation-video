@@ -1,3 +1,6 @@
+# Copyright (c) 2026 小白姐姐. MIT License.
+# https://github.com/newbaisays-aigc/knowledge-animation-video
+
 """按配置把 配音 + 背景音乐 + 音效 混成 public/mix.wav
 用法：python3 mix_audio.py mix.json
 mix.json 示例：

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 小白姐姐. MIT License.
+// https://github.com/newbaisays-aigc/knowledge-animation-video
 /**
  * 美术馆组件库 · 视图数学与镜头工具
  * 视图 View = {t: 纹理序号, c: [u,v] 画面上对准锚点的位置, h: 画作在屏幕上的高度(px), a: [x,y] 屏幕锚点}
